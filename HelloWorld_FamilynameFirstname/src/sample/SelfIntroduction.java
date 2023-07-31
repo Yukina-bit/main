@@ -1,9 +1,8 @@
 package sample;
-
 public class SelfIntroduction {
 	public static void main(String[] args) {
 		//氏名
-		String name = "山田　花子";
+		String name = "山田 花子";
 		//年齢
 		int age = 25;
 		//趣味
