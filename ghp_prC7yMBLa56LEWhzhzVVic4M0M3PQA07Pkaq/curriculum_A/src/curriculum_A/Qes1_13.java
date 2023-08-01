@@ -19,7 +19,7 @@ public class Qes1_13 {
 		boolean bool1 = false;
 
 		// 問３
-		// 変数に値を代入
+		// 変数に値を代入する
 		b = 10;
 		short1 = 100;
 		i = 1000;
@@ -44,7 +44,7 @@ public class Qes1_13 {
 		System.out.println(b - short1 + "\n");
 
 		// 問５
-		// 「ハローJAVA43」とコンソールへ出力
+		// 「ハローJAVA43」とコンソールへ出力する
 		int num = 20;
 		int num1 = 23;
 		System.out.println("ハローJAVA" + (num + num1 + "\n"));
