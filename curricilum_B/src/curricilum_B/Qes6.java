@@ -25,7 +25,7 @@ public class Qes6 {
 		int stocks5 = rand.nextInt(11);
 		int stocks6 = rand.nextInt(11);
 		// 11からランダム値を引き算する
-		int stocks7 = 11 - stocks5;
+		int stocks7 = 11 - stocks6;
 
 		// 文字列"テレビ"を作成する
 		String tv = "テレビ";
