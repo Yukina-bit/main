@@ -7,15 +7,19 @@ public class Dog {
 	// Q4：Q2で作成した変数に引数を代入するコンストラクタを作成してください。
 
 	// Q1 動物の名前の変数を定義する
-	String dog;
+	public String dog;
 
 	// Q2 動物の数の変数を定義する
-	int dogNum;
+	public int dogNum;
 
-	// Q3、Q4 変数に「犬」、引数を代入するコンストラクタを作成する
+	// Q3 変数に「犬」を代入するコンストラクタを作成する
 	public Dog() {
 		dog = "犬";
-		dogNum = 4;
 	}
 
+	// Q4 変数に引数を代入するコンストラクタを作成する
+	public Dog(int dogNum){
+	    this.dogNum = dogNum;
+	  }
+	
 }

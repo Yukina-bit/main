@@ -18,7 +18,8 @@ public class Animal {
 
 		// Q2
 		// Dogクラス 変数dogNumを出力する
-		System.out.println(dogClass.dogNum + "\n");
+		Dog num = new Dog(4);
+		System.out.println(num.dogNum + "\n");
 
 		// Q3
 		// 日付（今回は現在の日時）を取得する
