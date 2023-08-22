@@ -1,19 +1,19 @@
-package zikkou;
+package execution;
 
-import shori.Question;
+import process.Sub;
 
-public class Sample {
+public class Main {
 
 	public static void main(String[] args) {
-		// shoriパッケージのクラスを呼び出す
-		Question str1 = new Question();
+		// 処理パッケージのクラスを呼び出す
+		Sub subStr = new Sub();
 		// 変数を出力する
-		System.out.println(str1.str);
+		System.out.println(subStr.introStr);
 
-		// shoriパッケージのクラスを呼び出す
-		Question time = new Question();
+		// 処理パッケージのクラスを呼び出す
+		Sub subToday = new Sub();
 		// 変数を出力する
-		System.out.println("今の現在日時は " + time.timeStamp + " です");
+		System.out.println("今の現在日時は " + subToday.timeStamp + " です");
 
 	}
 
