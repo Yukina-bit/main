@@ -12,56 +12,73 @@ package main;
 
 public class Main {
 
-	// フィールド変数を作成する
-	private String name;
-	private double length;
-	private int speed;
+	class Name {
+		// フィールドを宣言する
+		private String name;
 
-	// getterメソッドを作成する
-	public String getName() {
-		return name;
-	}
-	
-	public double getLength() {
-		return length;
-	}
+		// getterメソッドを作成する
+		public String getName() {
+			return name;
+		}
 
-	public int getSpeed() {
-		return speed;
+		// setterメソッドを作成する
+		public void setName(String name) {
+			this.name = name;
+		}
 	}
 
-	// setterメソッドを作成する
-	public void setName(String name) {
-		this.name = name;
+	class Length {
+		// フィールドを宣言する
+		private double length;
+
+		// getterメソッドを作成する
+		public double getLength() {
+			return length;
+		}
+
+		// setterメソッドを作成する
+		public void setLength(double length) {
+			this.length = length;
+		}
 	}
 
-	public void setLength(double length) {
-		this.length = length;
-	}
+	class Speed {
+		// フィールドを宣言する
+		private int speed;
 
-	public void setSpeed(int speed) {
-		this.speed = speed;
+		// getterメソッドを作成する
+		public int getSpeed() {
+			return speed;
+		}
+
+		// setterメソッドを作成する
+		public void setSpeed(int speed) {
+			this.speed = speed;
+		}
 	}
 
 	public static void main(String[] args) {
 
 		// クラスをインスタンス化する
 		Main main = new Main();
-		
+		Name name = main.new Name();
+		Length length = main.new Length();
+		Speed speed = main.new Speed();
+
 		// 変数に値を代入する
 		String animal = "ライオン";
-		double length = 2.1;
-		int speed = 80;
+		double doubleLength = 2.1;
+		int intSpeed = 80;
 
 		// setterメソッドに変数を渡す
-		main.setName(animal);
-		main.setLength(length);
-		main.setSpeed(speed);
-		
+		name.setName(animal);
+		length.setLength(doubleLength);
+		speed.setSpeed(intSpeed);
+
 		// getterメソッドでsetterでセットした変数を取得し出力する
-		System.out.println("動物名：" + main.getName());
-		System.out.println("体長：" + main.getLength() + "m");
-		System.out.println("速度：" + main.getSpeed() + "km/h");
+		System.out.println("動物名：" + name.getName());
+		System.out.println("体長：" + length.getLength() + "m");
+		System.out.println("速度：" + speed.getSpeed() + "km/h");
 	}
 
 }
