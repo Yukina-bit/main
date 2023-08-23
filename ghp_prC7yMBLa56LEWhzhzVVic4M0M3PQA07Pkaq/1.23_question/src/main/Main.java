@@ -1,6 +1,16 @@
-package question;
+package main;
 
-public class Question {
+/*
+ * 下記がコンソールに出力されるように作成してください
+    ※thisとsetterとgetterとフィールドを使ってください
+    
+    動物名：ライオン
+    体長：2.1m
+    速度：80km/h
+ * 
+ */
+
+public class Main {
 
 	// フィールド変数を作成する
 	private String name;
@@ -36,7 +46,7 @@ public class Question {
 	public static void main(String[] args) {
 
 		// クラスをインスタンス化する
-		Question quest = new Question();
+		Main main = new Main();
 		
 		// 変数に値を代入する
 		String animal = "ライオン";
@@ -44,14 +54,14 @@ public class Question {
 		int speed = 80;
 
 		// setterメソッドに変数を渡す
-		quest.setName(animal);
-		quest.setLength(length);
-		quest.setSpeed(speed);
+		main.setName(animal);
+		main.setLength(length);
+		main.setSpeed(speed);
 		
 		// getterメソッドでsetterでセットした変数を取得し出力する
-		System.out.println("動物名：" + quest.getName());
-		System.out.println("体長：" + quest.getLength() + "m");
-		System.out.println("速度：" + quest.getSpeed() + "km/h");
+		System.out.println("動物名：" + main.getName());
+		System.out.println("体長：" + main.getLength() + "m");
+		System.out.println("速度：" + main.getSpeed() + "km/h");
 	}
 
 }
