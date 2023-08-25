@@ -11,49 +11,34 @@ public class Sub {
 	 * 
 	 */
 
-	public class Name {
-		// フィールドを宣言する
-		private String name;
+	// フィールドを宣言する
+	private String name;
+	private double length;
+	private int speed;
 
-		// getterメソッドを作成する
-		public String getName() {
-			return name;
-		}
-
-		// setterメソッドを作成する
-		public void setName(String name) {
-			this.name = name;
-		}
+	// getterメソッドを作成する
+	public String getName() {
+		return name;
 	}
 
-	public class Length {
-		// フィールドを宣言する
-		private double length;
-
-		// getterメソッドを作成する
-		public double getLength() {
-			return length;
-		}
-
-		// setterメソッドを作成する
-		public void setLength(double length) {
-			this.length = length;
-		}
+	public double getLength() {
+		return length;
 	}
 
-	public class Speed {
-		// フィールドを宣言する
-		private int speed;
-
-		// getterメソッドを作成する
-		public int getSpeed() {
-			return speed;
-		}
-
-		// setterメソッドを作成する
-		public void setSpeed(int speed) {
-			this.speed = speed;
-		}
+	public int getSpeed() {
+		return speed;
 	}
 
+	// setterメソッドを作成する
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setLength(double length) {
+		this.length = length;
+	}
+
+	public void setSpeed(int speed) {
+		this.speed = speed;
+	}
 }
