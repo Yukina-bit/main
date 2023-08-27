@@ -1,5 +1,7 @@
 package exection;
 
+import java.util.Objects;
+
 import process.Sub;
 
 public class Main {
@@ -13,13 +15,21 @@ public class Main {
 		sub.setLength(2.1);
 		sub.setSpeed(80);
 
-		// nullチェック
-		if (sub != null) {
-			// setterを使ってプロパティを取得する
-			System.out.println("動物名：" + sub.getName());
-			System.out.println("体長：" + sub.getLength() + "m");
-			System.out.println("速度：" + sub.getSpeed() + "km/h");
+		// サブクラスnullチェック
+		if (Objects.nonNull(sub)) {
+			// 名前nullチェック
+			if (Objects.nonNull(sub.getName())) {
+				// 文章を作成する　
+				System.out.println("動物名：" + sub.getName());
+				System.out.println("体長：" + sub.getLength() + "m");
+				System.out.println("速度：" + sub.getSpeed() + "km/h");
+			} else {
+				// 名前がnullの場合に出力する
+				System.out.println("nameはnullです");
+			}
+		} else {
+			// サブクラスがnullの場合に出力する
+			System.out.println("subはnullです");
 		}
 	}
-
 }

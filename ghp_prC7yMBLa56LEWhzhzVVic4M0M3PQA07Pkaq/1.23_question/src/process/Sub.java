@@ -15,29 +15,25 @@ public class Sub {
 	private String name;
 	private double length;
 	private int speed;
-
-	// getterメソッドを作成する
+	
+	// getterを作成する
 	public String getName() {
 		return name;
 	}
-
 	public double getLength() {
 		return length;
 	}
-
 	public int getSpeed() {
 		return speed;
 	}
-
-	// setterメソッドを作成する
+	
+	// setterを作成する
 	public void setName(String name) {
 		this.name = name;
 	}
-
 	public void setLength(double length) {
 		this.length = length;
 	}
-
 	public void setSpeed(int speed) {
 		this.speed = speed;
 	}
