@@ -1,7 +1,5 @@
 package process;
 
-import java.util.Random;
-
 /*
  * 名前を入力したら下記がコンソールに出力されるように作ってください
     条件：数値は毎回変わるように作ってください
@@ -23,20 +21,16 @@ import java.util.Random;
     さあ冒険に出かけよう！
  * 
  */
-
 public class Sub {
+	
+	// フィールドを宣言する
+	public int hp;
+	public int mp;
+	public int attack;
+	public int speed;
+	public int defence;
 
-	// フィールド変数を作成する
-	public String openingStr1;
-	public String openingStr2;
-	public String endingStr;
-	private int hp;
-	private int mp;
-	private int attack;
-	private int speed;
-	private int defence;
-
-	// getterメソッドを作成する
+	// getterを作成する
 	public int getHp() {
 		return hp;
 	}
@@ -57,41 +51,41 @@ public class Sub {
 		return defence;
 	}
 
-	// コンストラクタを作成する
-	public Sub() {
-		openingStr1 = "こんにちは「 ";
-		openingStr2 = " 」さん";
-		endingStr = "さあ冒険に出かけよう！";
+	// setterを作成する
+	public void setHp(int hp) {
+		this.hp = hp;
 	}
 
-	// setterメソッドを作成する
-	public void setName(int hp, int mp, int attack, int speed, int defence) {
-		this.hp = hp;
+	public void setMp(int mp) {
 		this.mp = mp;
+	}
+
+	public void setAttack(int attack) {
 		this.attack = attack;
+	}
+
+	public void setSpeed(int speed) {
 		this.speed = speed;
+	}
+
+	public void setDefence(int defence) {
 		this.defence = defence;
 	}
-
+	
 	// サブクラスを作成する
-	public class SubClass extends Sub {
-		Random rand = new Random();
-		int numHp = rand.nextInt(999);
-		int numMp = rand.nextInt(999);
-		int numAttack = rand.nextInt(999);
-		int numSpeed = rand.nextInt(999);
-		int numDefence = rand.nextInt(999);
-		{
-			// 変数に値を代入する
-			hp = numHp;
-			mp = numMp;
-			attack = numAttack;
-			speed = numSpeed;
-			defence = numDefence;
-			// setterメソッドに変数を渡す
-			setName(hp, mp, attack, speed, defence);
+	public class StrSub extends Sub {
+		// メソッドを作成する
+		public void greeting1() {
+			System.out.print("こんにちは「 ");
+		}
+
+		public void greeting2() {
+			System.out.println(" 」さん\nステータス");
+		}
+
+		public void endingStr() {
+			System.out.println("さあ冒険に出かけよう！");
 		}
 
 	}
-
 }
