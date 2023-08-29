@@ -23,8 +23,8 @@ import java.util.Scanner;
     さあ冒険に出かけよう！
  * 
  */
-
 public class Sub {
+	// ランダムな値を作成する
 	Random rand = new Random();
 	AbilitySub sub = new AbilitySub(rand.nextInt(999), rand.nextInt(999),
 			rand.nextInt(999), rand.nextInt(999), rand.nextInt(999));
