@@ -1,5 +1,7 @@
 package process;
 
+import java.util.Random;
+import java.util.Scanner;
 /*
  * 名前を入力したら下記がコンソールに出力されるように作ってください
     条件：数値は毎回変わるように作ってください
@@ -21,28 +23,60 @@ package process;
     さあ冒険に出かけよう！
  * 
  */
+
 public class Sub {
-	
+	Random rand = new Random();
+	AbilitySub sub = new AbilitySub(rand.nextInt(999), rand.nextInt(999),
+			rand.nextInt(999), rand.nextInt(999), rand.nextInt(999));
+
+	public void main() {
+		// ユーザー名を入力してもらう
+		Scanner scanner = new Scanner(System.in);
+		String name = scanner.nextLine();
+
+		// 未入力の場合、エラー文を出す
+		if (name.length() == 0) {
+			System.out.println("名前を入力してください");
+		} else {
+			// 上記以外の場合、出力する
+			System.out.println("こんにちは「 " + name
+					+ " 」さん\nステータス");
+			System.out.println(sub.toString() + "\n");
+			System.out.println("さあ冒険に出かけよう！");
+		}
+		// scaanerを閉じる
+		scanner.close();
+	}
+}
+
+// クラスを作成する
+class Ability {
 	// フィールドを宣言する
-	public int hp;
-	public int mp;
-	public int attack;
-	public int speed;
-	public int defence;
+	int hp;
+	int mp;
+	int attack;
+
+	public Ability(int hp, int mp, int attack) {
+		this.hp = hp;
+		this.mp = mp;
+		this.attack = attack;
+	}
+
+	// 出力用のメソッドを作成する
+	public String toString() {
+		return "HP：" + this.hp + "\n" + "MP：" + this.mp + "\n" +
+				"攻撃力：" + this.attack + "\n";
+	}
+
+}
+
+// サブクラスを作成する
+class AbilitySub extends Ability {
+	// フィールドを作成する
+	int speed;
+	int defence;
 
 	// getterを作成する
-	public int getHp() {
-		return hp;
-	}
-
-	public int getMp() {
-		return mp;
-	}
-
-	public int getAttack() {
-		return attack;
-	}
-
 	public int getSpeed() {
 		return speed;
 	}
@@ -52,18 +86,6 @@ public class Sub {
 	}
 
 	// setterを作成する
-	public void setHp(int hp) {
-		this.hp = hp;
-	}
-
-	public void setMp(int mp) {
-		this.mp = mp;
-	}
-
-	public void setAttack(int attack) {
-		this.attack = attack;
-	}
-
 	public void setSpeed(int speed) {
 		this.speed = speed;
 	}
@@ -71,21 +93,17 @@ public class Sub {
 	public void setDefence(int defence) {
 		this.defence = defence;
 	}
-	
-	// サブクラスを作成する
-	public class StrSub extends Sub {
-		// メソッドを作成する
-		public void greeting1() {
-			System.out.print("こんにちは「 ");
-		}
 
-		public void greeting2() {
-			System.out.println(" 」さん\nステータス");
-		}
-
-		public void endingStr() {
-			System.out.println("さあ冒険に出かけよう！");
-		}
-
+	public AbilitySub(int hp, int mp, int attack, int speed, int defence) {
+		super(hp, mp, attack);
+		this.speed = speed;
+		this.defence = defence;
 	}
+
+	// メソッドを作成する
+	public String toString() {
+		return super.toString() + "素早さ：" + getSpeed() + "\n" +
+				"攻撃力：" + getDefence();
+	};
+
 }
