@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Objects;
 import java.util.Scanner;
-import java.util.stream.Stream;
 
 import process.Sub;
 
@@ -15,19 +14,16 @@ public class Main {
 		// サブクラスをインスタンス化する
 		Sub sub = new Sub(0);
 		// 入力値を読み取る
-		System.out.println("1〜10の数字を入力してください。");
+		System.out.println("0〜10の数字を入力してください。");
 		Scanner sc = new Scanner(System.in);
 
 		// 「,」で区切った入力値を配列に格納する
 		String[] input = sc.nextLine().split(",");
 
-		// String型配列をint型配列に変換
-		int[] intInput = Stream.of(input).mapToInt(Integer::parseInt).toArray();
-
-		// int型配列をInteger型に変換
-		Integer[] boxedArray = new Integer[intInput.length];
-		for (int i = 0; i < intInput.length; i++) {
-			boxedArray[i] = Integer.valueOf(intInput[i]);
+		// String型配列をInteger型に変換
+		Integer[] boxedArray = new Integer[input.length];
+		for (int i = 0; i < input.length; i++) {
+			boxedArray[i] = Integer.valueOf(input[i]);
 		}
 
 		// 昇順・降順の値を入力してもらう
@@ -50,10 +46,10 @@ public class Main {
 			System.out.println("sub is null.");
 		}
 
-		// 格納された分だけループする
+		// 配列の分だけループする
 		for (int intInputs : boxedArray) {
 			// メソッドを呼び出す
-			sub.getInfo(intInputs);
+			sub.printInfo(intInputs);
 		}
 
 		// スキャナーを閉じる

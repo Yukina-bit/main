@@ -39,72 +39,22 @@ package process;
 
 public class Sub {
 
-	Array array = new Array();
+	// 変数を宣言する
+	Array arraySub = new Array();
 	public int i = 0;
 	public int intInputs;
 
 	// 結果を表示するメソッドを作成する
-	public void printInfo() {
+	public void printInfo(int i) {
 		// 「：」区切りで分けて、一次元配列に格納する
-		String[] str = array.array[i][0].split(":");
+		String[] str = arraySub.array[i][0].split(":");
 		// 出力内容
 		System.out.println("都道府県名：" + str[0] + "\n県庁所在地：" +
 				str[1] + "\n面積：" + str[2] + ".0km2\n");
 	}
 
-	// switch文のメソッドを作成
-	public void getInfo(int intInputs) {
-		switch (intInputs) {
-		case 0:
-			i = 0;
-			printInfo();
-			break;
-		case 1:
-			i = 1;
-			printInfo();
-			break;
-		case 2:
-			i = 2;
-			printInfo();
-			break;
-		case 3:
-			i = 3;
-			printInfo();
-			break;
-		case 4:
-			i = 4;
-			printInfo();
-			break;
-		case 5:
-			i = 5;
-			printInfo();
-			break;
-		case 6:
-			i = 6;
-			printInfo();
-			break;
-		case 7:
-		 i = 7;
-			printInfo();
-			break;
-		case 8:
-			i = 8;
-			printInfo();
-			break;
-		case 9:
-			i = 9;
-			printInfo();
-			break;
-		case 10:
-			i = 10;
-			printInfo();
-			break;
-		}
-	}
-	
 	public Sub(int intInputs) {
 		this.intInputs = intInputs;
 	}
-	
-	
+
 }
