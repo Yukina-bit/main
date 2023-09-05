@@ -1,5 +1,8 @@
 package person;
 
+import vehicle.Bicycle;
+import vehicle.Car;
+
 public class Person {
 	// インスタンスフィールドを定義
 	public String name;
@@ -33,6 +36,18 @@ public class Person {
 	// 合計人数を出力するメソッド
 	public static void printCount() {
 		System.out.println("合計" + Person.count + "人です\n");
+	}
+
+	// ownerメソッドの値をセットし、出力するメソッド
+	public void buy(Car car) {
+		car.setOwner(this.name);
+		System.out.println(car.getOwner() + "が購入しました");
+	}
+
+	// ownerメソッドの値をセットし、出力するメソッド
+	public void buy(Bicycle bicycle) {
+		bicycle.setOwner(this.name);
+		System.out.println(bicycle.getOwner() + "が購入しました");
 	}
 
 }
