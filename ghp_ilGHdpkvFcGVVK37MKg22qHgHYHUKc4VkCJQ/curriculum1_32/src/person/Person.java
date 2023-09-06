@@ -5,7 +5,7 @@ public class Person {
 	public int age;
 	public double height;
 	public double weight;
-	static int count = 0;
+	public static int count = 0;
 
 	public Person(String name, int age, double height, double weight) {
 		count++;
